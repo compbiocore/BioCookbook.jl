@@ -1,2 +1,3 @@
-# BioJulia-cookbook
-A collection of Julia scripts for bioinformatics in use by CBC
+# BioCookbook.jl
+
+A collection of Julia scripts for bioinformatics in use by CBC.

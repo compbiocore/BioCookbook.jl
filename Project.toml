@@ -1,0 +1,8 @@
+name = "BioCookbook"
+uuid = "81a24554-c5d7-11e9-2cfa-cdf26351db2d"
+authors = ["August Guang <august.guang@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
+FASTX = "c2308a5c-f048-11e8-3e8a-31650f418d12"
