@@ -1,5 +1,6 @@
-using FASTX
+using FASTX#master
 using CodecZlib
+
 # Zlib could possibly be made more efficient with transcodingstreams
 # https://github.com/bicycle1885/TranscodingStreams.jl
 # NOTE: if you assume that each FASTQ files are sorted in same order then
