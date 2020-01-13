@@ -27,6 +27,7 @@ function match_screens(input, out; merge_type = "intersection", raw_fq=".fq.gz",
     close(writer_r1)
     close(writer_r2)
 end
+
 # search thru r1_map for records in r2_map. If matched, write to file and
 # delete record from both r1_map and r2_map
 function map_search!(r1_map, r2_map, w1, w2)
@@ -83,5 +84,5 @@ end
 # appears to not be needed for now
 #function parse(header)
 #end
-@time #match_screens("/Users/aragaven/scratch/test_julia/test_fq_screen/D1137A_1m", "/Users/aragaven/scratch/test_julia/test_fq_screen/D1137A", filt_fq="_tr.tagged_filter.fastq.gz")
+#@time #match_screens("/Users/aragaven/scratch/test_julia/test_fq_screen/D1137A_1m", "/Users/aragaven/scratch/test_julia/test_fq_screen/D1137A", filt_fq="_tr.tagged_filter.fastq.gz")
 @time match_screens(ARGS[1], ARGS[2], filt_fq="_tr.tagged_filter.fastq.gz")
