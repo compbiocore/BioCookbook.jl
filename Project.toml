@@ -4,5 +4,12 @@ authors = ["August Guang <august.guang@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
 BioSequences = "7e6ae17a-c86d-528c-b3b9-7f778a29fe59"
+Cairo = "159f3aea-2a34-519c-b102-8c37f9878175"
+Compose = "a81c6b42-2e10-5240-aca2-a61377ecd94b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 FASTX = "c2308a5c-f048-11e8-3e8a-31650f418d12"
+Fontconfig = "186bb1d3-e1f7-5a2c-a377-96d770f13627"
+Gadfly = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
+XAM = "d759349c-bcba-11e9-07c2-5b90f8f05f7c"

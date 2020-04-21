@@ -38,10 +38,6 @@ function map_search!(r1_map, r2_map, w1, w2)
             write(w2, paired_rec)
             delete!(r2_map,header)
         end
-    #    i = i + 1
-    #    if i == 10000
-    #        break
-    #    end
     end
 end
 # search thru reader for records with identifiers in rmap
@@ -58,10 +54,6 @@ function search!(file, rmap, w1, w2)
             write(w1, record)
             write(w2, paired_rec)
         end
-    #    i = i + 1
-    #    if i == 10000
-    #        break
-    #    end
     end
     close(reader)
 end
