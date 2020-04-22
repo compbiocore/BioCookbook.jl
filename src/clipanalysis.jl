@@ -34,7 +34,7 @@ function clippedStats(reader::XAM.BAM.Reader)
   return readsClipped, readsTotal, DataFrames.DataFrame(type=type,qual=qual)
 end
 
-function clippedStatsHelper!(record::XAM.BAM.Record, qual::Float64[],type::String[],
+function clippedStatsHelper!(record::XAM.BAM.Record, qual::Vector{Float64},type::Vector{String},
   readsClipped::Int8)
   cigar = XAM.BAM.cigar_rle(record)
   push!(qual,Statistics.mean(XAM.BAM.quality(record)))
