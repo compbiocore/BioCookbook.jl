@@ -14,7 +14,9 @@ using CodecZlib
 # the search function is used to build the union and map_search is the intersection
 function match_screens(input, out; merge_type = "intersection", raw_fq=".fq.gz", filt_fq = ".tagged_filter.fastq.gz", out_fq=".fs.fq.gz")
     r1_map = make_map(string(input,"_1", filt_fq))
+    println("Map for read1 completed")
     r2_map = make_map(string(input,"_2", filt_fq))
+    println("Map for read2 completed")
     writer_r1 = FASTQ.Writer(GzipCompressorStream(open(string(out,"_1",out_fq),"w")))
     writer_r2 = FASTQ.Writer(GzipCompressorStream(open(string(out,"_2", out_fq),"w")))
     map_search!(r1_map,r2_map,writer_r1,writer_r2)
@@ -25,6 +27,7 @@ function match_screens(input, out; merge_type = "intersection", raw_fq=".fq.gz",
     close(writer_r1)
     close(writer_r2)
 end
+
 # search thru r1_map for records in r2_map. If matched, write to file and
 # delete record from both r1_map and r2_map
 function map_search!(r1_map, r2_map, w1, w2)
@@ -73,4 +76,5 @@ end
 # appears to not be needed for now
 #function parse(header)
 #end
-@time match_screens("/Users/aguang/CORE/scratch/fastq_screen/D1121A","/Users/aguang/CORE/scratch/fastq_screen/test.fq.gz")
+#@time #match_screens("/Users/aragaven/scratch/test_julia/test_fq_screen/D1137A_1m", "/Users/aragaven/scratch/test_julia/test_fq_screen/D1137A", filt_fq="_tr.tagged_filter.fastq.gz")
+@time match_screens(ARGS[1], ARGS[2], filt_fq="_tr.tagged_filter.fastq.gz")
