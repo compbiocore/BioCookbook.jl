@@ -1,7 +1,8 @@
 """
   extractReads(reader::XAM.BAM.Reader, chrom::String, chromrange::UnitRange)
 
-Extracts reads from a region as a FASTQ file.
+Extracts reads from a region as a FASTQ file. Note: This will NOT keep
+track of pair information!
 """
 function extractReads(reader::XAM.BAM.Reader, chrom::String,
   chromrange::UnitRange, outfile::String)
