@@ -1,4 +1,4 @@
-using FASTX#master
+using BioSequences.FASTQ
 using CodecZlib
 
 # Zlib could possibly be made more efficient with transcodingstreams
